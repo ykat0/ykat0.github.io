@@ -1,0 +1,234 @@
+html {
+	font-size: 62.5%; /* -> 10px; */
+}
+
+body {
+	background-color: rgb(230, 230, 230);
+	font-size: 1.4rem; /* -> 14px; */
+	/*background-attachment: fixed;*/
+	margin-top: 0;
+	margin-left: 0;
+	margin-right: auto;
+}
+
+div#header {
+	background-color: rgb(47, 85, 151);
+	min-width: 960px;
+	margin-left: 0;
+	margin-right: auto;
+	padding-left: 30px;
+	padding-top: 30px;
+	padding-bottom: 30px;
+}
+
+div#container {
+	background-color: white;
+	max-width: 960px;
+	margin: 0 auto;
+	/*margin-left: auto;
+    margin-right: auto;*/
+	padding-left: 1.4rem;
+	padding-right: 1.4rem;
+}
+
+h1 {
+	color: white;
+	font-family: 'arial', sans-serif;
+	font-size: 3.2rem;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 0.2em;
+	text-align: center;
+}
+
+h1#title a {
+	color: white;
+}
+
+h1#title a:hover {
+	text-decoration: none;
+}
+
+ul#globalnav {
+	background-color: black;
+	/*background-color: rgb(140, 140, 140);*/
+	min-width: 960px;
+	margin: 0;
+	padding: 6px;
+}
+
+ul#globalnav li {
+    display: inline;
+	font-family: 'arial', sans-serif;
+	font-size: 1.6rem;
+	/*font-weight: bold;*/
+	/*font-size: 95%;*/
+	list-style-type: none;
+	margin: 0;
+	padding: 5%;
+}
+
+ul#globalnav a {color: white;}
+
+ul#globalnav a:hover {
+	background-color: white;
+	color: rgb(47, 85, 151);
+	text-decoration: none;
+	padding-top: 8px;
+	padding-bottom: 8px;
+}
+
+h2 {
+	color: rgb(47, 85, 151);
+	font-family: 'arial', sans-serif;
+	text-indent: 1rem;
+	border-left: solid 1rem;
+	border-left-color: rgb(47, 85, 151);
+	border-top: dotted 0.1rem;
+	border-top-color: rgb(200, 200, 200);
+	border-bottom: dotted 0.1rem;
+	border-bottom-color: rgb(200, 200, 200);
+	padding: 0.1rem;
+	background-color: rgb(240, 246, 253);
+	margin-top: 0;
+}
+
+div.subsec {margin-left: 2rem;}
+
+h3 {
+	color: #333333;
+	font-family: 'arial', sans-serif;
+	text-indent: 0.5rem;
+	border-left: solid 1rem;
+	border-left-color: #333333;
+	border-top: dotted 0.1rem;
+	border-top-color: rgb(200, 200, 200);
+	border-bottom: dotted 0.1rem;
+	border-bottom-color: rgb(200, 200, 200);
+	padding: 0.1rem;
+	background-color: rgb(245, 245, 245);
+}
+
+p, ul, ol {
+	font-family: 'arial', sans-serif;
+	line-height: 2.2rem;
+}
+
+div {font-family: 'arial', sans-serif;}
+
+.center {text-align: center;}
+
+.right {text-align: right;}
+
+.smaller {font-size: smaller;}
+
+.italic {font-style: italic;}
+
+.monospace {font-family: 'Courier New', monospace;}
+
+.boxed {
+	/*background-color: #f5f5f5;*/
+	border: double 3px black;
+	padding: 5px;
+}
+
+a {text-decoration: none;}
+
+a:link {color: #0033cc;}
+
+a:visited {color: #0033cc;}
+
+a:hover {
+	color: #0033cc;
+	/*background-color: #fffacd;*/
+	text-decoration: underline;
+}
+
+a:active {color: #0033cc;}
+
+.floatl {float: left; padding: 10px;}
+.floatc {margin: 10px auto;}
+.floatr {float: right; padding: 10px;}
+
+.white {color: white;}
+
+.maroon {color: maroon;}
+
+img {padding: 2px;}
+
+.slideshow {
+	position: relative;
+	overflow: hidden;
+	/*max-width: 960px;*/
+}
+
+/* :::::: slideContents :::::: */
+.slideContents {
+	position: relative;
+	background: white;
+	text-align: center;
+	-webkit-user-select: none;
+	user-select: none;
+}
+.slideContents section {
+	position: absolute;
+	top: 1px;
+	left: 0;
+	width: 100%;
+}
+.slideContents section img {
+	max-width: 100%;
+	padding: 0 50px;
+	box-sizing: border-box;
+	vertical-align: middle;
+}
+
+/* :::::: mechanism :::::: */
+.slideContents #slide1 {
+	position: relative;
+}
+.slideContents section {
+	animation: autoplay 30s cubic-bezier(0.215, 0.61, 0.355, 1) infinite;
+}
+@keyframes autoplay {
+	0%, 16%, 100% { transform: none; }
+	20% { transform: translateX(-100%); }
+	20.001%, 96% { transform: translateX(100%); }
+}
+.slideContents #slide1 { animation-delay: 0s; }
+.slideContents #slide2 { animation-delay: -24s; }
+.slideContents #slide3 { animation-delay: -18s; }
+.slideContents #slide4 { animation-delay: -12s; }
+.slideContents #slide5 { animation-delay: -6s; }
+
+#page_top {
+	width: 10rem;
+	height: 4rem;
+	position: fixed;
+	right: 0;
+	bottom: 10px;
+	background: rgb(47, 85, 151);
+	opacity: 0.7;
+}
+
+#page_top a {
+	position: relative;
+	display: block;
+	width: 10rem;
+	height: 4rem;
+	text-decoration: none;
+}
+
+#page_top a::before {
+	content: '\02227';
+	font-size: 1.4rem;
+	font-weight: bold;
+	color: white;
+	position: absolute;
+	top: 1rem;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	margin: auto;
+	text-align: center;
+}
